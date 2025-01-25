@@ -1,0 +1,2769 @@
+;=============================================================================;
+;                                                                             ;
+;  File:          HTB_FHB_PM_CA_2021-02-24.eds                                ;
+;  Description:   CANopen Electronic Data Sheet (EDS) for                     ;
+;                 MEGATRON Encoder HTB/FHB (Multiturn)                        ;
+;                                                                             ;
+;                                                                             ;
+;                                                                             ;
+;  MEGATRON Elektronik GmbH & Co. KG                                          ;
+;  Hermann-Oberth-Strae 7                                                    ;
+;  85640 Putzbrunn/Mnchen                                                    ;
+;  Germany                                                                    ;
+;  Tel: +49 89 46094-0                                                        ;
+;  Fax: +49 89 46094-201                                                      ;
+;                                                                             ;
+
+[FileInfo]
+CreatedBy=C.Haude
+ModifiedBy=
+Description=EDS for HTB_FHB_PM
+CreationTime=02:53PM
+CreationDate=02-24-2021
+ModificationTime=
+ModificationDate=
+FileName=HTB_FHB_PM_CA_2021-01-24.eds
+FileVersion=1
+FileRevision=26
+EDSVersion=4.3
+
+[DeviceInfo]
+VendorName=MEGATRON Elektronik GmbH & Co. KG
+VendorNumber=0x000004F9
+ProductName=HTB/FHB-PM-CA
+ProductNumber=0x485442
+OrderCode=HTB/FHB-PM-CA
+BaudRate_10=0
+BaudRate_20=0
+BaudRate_50=0
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=1
+BaudRate_1000=1
+SimpleBootUpMaster=0
+SimpleBootUpSlave=1
+Granularity=8
+DynamicChannelsSupported=0
+CompactPDO=19
+GroupMessaging=0
+NrOfRXPDO=0
+NrOfTXPDO=4
+LSS_Supported=1
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=0
+Dummy0003=0
+Dummy0004=0
+Dummy0005=0
+Dummy0006=0
+Dummy0007=0
+
+[Comments]
+Lines=7
+Line1=CANopen Electronic Data Sheet (EDS) for the
+Line2=HTB_FHB CANopen multiturn encoder
+Line3=
+Line4=MEGATRON Elektronik GmbH & Co. KG
+Line5=www.megatron.de
+Line6=Tel: +49-46094-0
+Line7=Fax: +49-46094-201
+
+[MandatoryObjects]
+SupportedObjects=3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[1000]
+ParameterName=Device type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00020196
+PDOMapping=0
+ObjFlags=0x0
+
+[1001]
+ParameterName=Error register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+ObjFlags=0x0
+
+[1018]
+ParameterName=Identity object
+ObjectType=0x9
+SubNumber=5
+ObjFlags=0x0
+
+[1018sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+ObjFlags=0
+
+[1018sub1]
+ParameterName=Vendor-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x000004F9
+PDOMapping=0
+ObjFlags=0
+
+[1018sub2]
+ParameterName=Product code
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x485442
+PDOMapping=0
+ObjFlags=0
+
+[1018sub3]
+ParameterName=Revision number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[1018sub4]
+ParameterName=Serial number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+;-----------------------------------------------------------------------------;
+; Optional objects                                                            ;
+;-----------------------------------------------------------------------------;
+
+[OptionalObjects]
+SupportedObjects=79
+1=0x1002
+2=0x1003
+3=0x1005
+4=0x1008
+5=0x1009
+6=0x100A
+7=0x100C
+8=0x100D
+9=0x1010
+10=0x1011
+11=0x1014
+12=0x1015
+13=0x1016
+14=0x1017
+15=0x1020
+16=0x1029
+17=0x1800
+18=0x1801
+19=0x1802
+20=0x1803
+21=0x1A00
+22=0x1A01
+23=0x1A02
+24=0x1A03
+25=0x1F80
+26=0x6000
+27=0x6001
+28=0x6002
+29=0x6003
+30=0x6004
+31=0x6008
+32=0x6009
+33=0x6030
+34=0x6040
+35=0x6050
+36=0x6200
+37=0x6300
+38=0x6301
+39=0x6302
+40=0x6310
+41=0x6311
+42=0x6312
+43=0x6313
+44=0x6314
+45=0x6315
+46=0x6316
+47=0x6317
+48=0x6320
+49=0x6321
+50=0x6322
+51=0x6323
+52=0x6324
+53=0x6325
+54=0x6326
+55=0x6327
+56=0x6330
+57=0x6331
+58=0x6332
+59=0x6333
+60=0x6334
+61=0x6335
+62=0x6336
+63=0x6337
+64=0x6400
+65=0x6401
+66=0x6402
+67=0x6500
+68=0x6501
+69=0x6502
+70=0x6503
+71=0x6504
+72=0x6505
+73=0x6506
+74=0x6507
+75=0x6508
+76=0x6509
+77=0x650A
+78=0x650B
+79=0x6510
+
+[1002]
+ParameterName=Manufacturer status register
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[1003]
+ParameterName=Pre-defined Error Field
+ObjectType=0x8
+SubNumber=6
+ObjFlags=0x0
+
+[1003sub0]
+ParameterName=Number of errors
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=5
+ObjFlags=0
+
+[1003sub1]
+ParameterName=Standard error field 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[1003sub2]
+ParameterName=Standard error field 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[1003sub3]
+ParameterName=Standard error field 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[1003sub4]
+ParameterName=Standard error field 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[1003sub5]
+ParameterName=Standard error field 5
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[1005]
+ParameterName=COB-ID SYNC message
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x80
+PDOMapping=0
+ObjFlags=0x0
+
+[1008]
+ParameterName=Manufacturer device name
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=HTB/FHB-PM-CA
+PDOMapping=0
+ObjFlags=0x0
+
+[1009]
+ParameterName=Manufacturer hardware version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=1.00
+PDOMapping=0
+ObjFlags=0x0
+
+[100A]
+ParameterName=Manufacturer software version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+ObjFlags=0x0
+
+[100C]
+ParameterName=Guard time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x0000
+PDOMapping=0
+LowLimit=0x0000
+HighLimit=0xffff
+ObjFlags=0x0
+
+[100D]
+ParameterName=Life time factor
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0xff
+ObjFlags=0x0
+
+[1010]
+ParameterName=Store parameters
+ObjectType=0x8
+SubNumber=6
+
+[1010sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=5
+PDOMapping=0
+LowLimit=0x01
+HighLimit=0x7f
+
+[1010sub1]
+ParameterName=Save all parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1010sub2]
+ParameterName=Save communication parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1010sub3]
+ParameterName=Save application parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1010sub4]
+ParameterName=Save manufacturer defined parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1010sub5]
+ParameterName=Save default values
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1011]
+ParameterName=Restore default parameters
+ObjectType=0x8
+SubNumber=6
+
+[1011sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=5
+PDOMapping=0
+LowLimit=0x01
+HighLimit=0x7f
+
+[1011sub1]
+ParameterName=Restore all default parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1011sub2]
+ParameterName=Restore communication default parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1011sub3]
+ParameterName=Restore application default parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1011sub4]
+ParameterName=Restore manufacturer defined default parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1011sub5]
+ParameterName=Restore default values
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000001
+PDOMapping=0
+ObjFlags=1
+
+[1014]
+ParameterName=COB-ID EMCY
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x80
+PDOMapping=0
+ObjFlags=0x0
+
+[1015]
+ParameterName=Inhibit time EMCY
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x0000
+PDOMapping=0
+LowLimit=0x0000
+HighLimit=0xffff
+ObjFlags=0x0
+
+[1016]
+ParameterName=Consumer heartbeat time
+ObjectType=0x8
+SubNumber=2
+
+[1016sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=0x01
+HighLimit=0x01
+
+[1016sub1]
+ParameterName=Consumer heartbeat time 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x0
+PDOMapping=0
+LowLimit=0x0
+HighLimit=0x007FFFFF
+ObjFlags=0
+
+[1017]
+ParameterName=Producer heartbeat time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x0000
+PDOMapping=0
+LowLimit=0x0000
+HighLimit=0xffff
+ObjFlags=0x0
+
+[1020]
+ParameterName=Verify configuration
+ObjectType=0x8
+SubNumber=3
+
+[1020sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=0x02
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x02
+
+[1020sub1]
+ParameterName=Configuration date
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1020sub2]
+ParameterName=Configuration time
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1029]
+ParameterName=Error behaviour
+ObjectType=0x8
+SubNumber=3
+
+[1029sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=0x02
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x02
+
+[1029sub1]
+ParameterName=Communication error
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x02
+
+[1029sub2]
+ParameterName=Internal device error
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x02
+; --------------- TPDO Communication Parameters ----------------
+
+[1800]
+ParameterName=TPDO 1 communication parameter
+ObjectType=0x9
+SubNumber=4
+ObjFlags=0x0
+
+[1800sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=5
+PDOMapping=0
+ObjFlags=0
+
+[1800sub1]
+ParameterName=COB-ID used by TPDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x40000180
+PDOMapping=0
+ObjFlags=0
+
+[1800sub2]
+ParameterName=Transmission type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0xFE
+PDOMapping=0
+ObjFlags=0
+
+[1800sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+ObjFlags=0
+
+[1801]
+ParameterName=TPDO 2 communication parameter
+ObjectType=0x9
+SubNumber=4
+ObjFlags=0x0
+
+[1801sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=5
+PDOMapping=0
+ObjFlags=0
+
+[1801sub1]
+ParameterName=COB-ID used by TPDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x40000280
+PDOMapping=0
+ObjFlags=0
+
+[1801sub2]
+ParameterName=Transmission type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+ObjFlags=0
+
+[1801sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+ObjFlags=0
+
+[1802]
+ParameterName=TPDO 3 communication parameter
+ObjectType=0x9
+SubNumber=4
+ObjFlags=0x0
+
+[1802sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=5
+PDOMapping=0
+ObjFlags=0
+
+[1802sub1]
+ParameterName=COB-ID used by TPDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x40000380
+PDOMapping=0
+ObjFlags=0
+
+[1802sub2]
+ParameterName=Transmission type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+ObjFlags=0
+
+[1802sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+ObjFlags=0
+
+[1803]
+ParameterName=TPDO 4 communication parameter
+ObjectType=0x9
+SubNumber=4
+ObjFlags=0x0
+
+[1803sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=5
+PDOMapping=0
+ObjFlags=0
+
+[1803sub1]
+ParameterName=COB-ID used by TPDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0xC0000480
+PDOMapping=0
+ObjFlags=0
+
+[1803sub2]
+ParameterName=Transmission type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+PDOMapping=0
+ObjFlags=0
+
+[1803sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+ObjFlags=0
+; --------------- TPDO Mapping Parameters ----------------
+
+[1A00]
+ParameterName=TPDO 1 mapping parameter
+ObjectType=0x9
+SubNumber=9
+ObjFlags=0x0
+
+[1A00sub0]
+ParameterName=Number of mapped application objects in TPDO
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=0
+HighLimit=8
+ObjFlags=0
+
+[1A00sub1]
+ParameterName=1st application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x60040020
+PDOMapping=0
+ObjFlags=0
+
+[1A00sub2]
+ParameterName=2nd application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A00sub3]
+ParameterName=3rd application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A00sub4]
+ParameterName=4th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A00sub5]
+ParameterName=5th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A00sub6]
+ParameterName=6th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A00sub7]
+ParameterName=7th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A00sub8]
+ParameterName=8th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A01]
+ParameterName=TPDO 2 mapping parameter
+ObjectType=0x9
+SubNumber=9
+ObjFlags=0x0
+
+[1A01sub0]
+ParameterName=Number of mapped application objects in TPDO
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x0
+PDOMapping=0
+LowLimit=0
+HighLimit=8
+ObjFlags=0
+
+[1A01sub1]
+ParameterName=1st application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x60040020
+PDOMapping=0
+ObjFlags=0
+
+[1A01sub2]
+ParameterName=2nd application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A01sub3]
+ParameterName=3rd application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A01sub4]
+ParameterName=4th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A01sub5]
+ParameterName=5th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A01sub6]
+ParameterName=6th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A01sub7]
+ParameterName=7th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A01sub8]
+ParameterName=8th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A02]
+ParameterName=TPDO 3 mapping parameter
+ObjectType=0x9
+SubNumber=9
+ObjFlags=0x0
+
+[1A02sub0]
+ParameterName=Number of mapped application objects in TPDO
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x0
+PDOMapping=0
+LowLimit=0
+HighLimit=8
+ObjFlags=0
+
+[1A02sub1]
+ParameterName=1st application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x0
+PDOMapping=0
+ObjFlags=0
+
+[1A02sub2]
+ParameterName=2nd application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A02sub3]
+ParameterName=3rd application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A02sub4]
+ParameterName=4th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A02sub5]
+ParameterName=5th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A02sub6]
+ParameterName=6th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A02sub7]
+ParameterName=7th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A02sub8]
+ParameterName=8th application object
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03]
+ParameterName=Tx PDO 4 Mapping Parameter
+ObjectType=0x9
+SubNumber=9
+ObjFlags=0x0
+
+[1A03sub0]
+ParameterName=Number of mapped objects
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x08
+PDOMapping=0
+LowLimit=0
+HighLimit=8
+ObjFlags=0
+
+[1A03sub1]
+ParameterName=Mapping for object 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03sub2]
+ParameterName=Mapping for object 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03sub3]
+ParameterName=Mapping for object 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03sub4]
+ParameterName=Mapping for object 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03sub5]
+ParameterName=Mapping for object 5
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03sub6]
+ParameterName=Mapping for object 6
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03sub7]
+ParameterName=Mapping for object 7
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+
+[1A03sub8]
+ParameterName=Mapping for object 8
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+ObjFlags=0
+; --------------- NMT startup ----------------
+
+[1F80]
+ParameterName=NMT startup
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+ObjFlags=0x0
+; --------------- Device profile objects ----------------
+
+[6000]
+ParameterName=Operating Parameters
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x04
+PDOMapping=0
+ObjFlags=0x0
+;--- 6001h: Measuring Units per Revolution --------------------------
+
+[6001]
+ParameterName=Measuring Units per Revolution
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=4096
+PDOMapping=0
+LowLimit=1
+HighLimit=65536
+ObjFlags=0x0
+;--- 6002h: Total Measuring Range -----------------------------------
+
+[6002]
+ParameterName=Total Measuring Range in Measuring Units
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=1073741824
+PDOMapping=0
+LowLimit=1
+HighLimit=4294967295
+ObjFlags=0x0
+;--- 6003h: Preset value --------------------------------------------
+
+[6003]
+ParameterName=Preset Value
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+ObjFlags=0x0
+;--- 6004h: Position value ------------------------------------------
+
+[6004]
+ParameterName=Position Value
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+ObjFlags=0x0
+;--- 6008h: High precision Position Value ---------------------------
+
+[6008]
+ParameterName=High precision Position Value
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=1
+ObjFlags=0x0
+;--- 6009h: High precision Preset Value -----------------------------
+
+[6009]
+ParameterName=High precision Preset Value
+ObjectType=0x7
+DataType=0x001b
+AccessType=rw
+PDOMapping=0
+ObjFlags=0x0
+;--- 6030h: Speed value ---------------------------------------------
+
+[6030]
+ParameterName=Speed value
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6030sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6030sub1]
+ParameterName=Speed value
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+ObjFlags=0
+;--- 6040h: Acceleration value --------------------------------------
+
+[6040]
+ParameterName=Acceleration value
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6040sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6040sub1]
+ParameterName=Acceleration value
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+ObjFlags=0
+;--- 6050h: Jerk value ----------------------------------------------
+
+[6050]
+ParameterName=Jerk value
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6050sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6050sub1]
+ParameterName=Jerk value
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+ObjFlags=0
+;--- 6200h: Cyclic timer --------------------------------------------
+
+[6200]
+ParameterName=Cyclic Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+LowLimit=0
+HighLimit=1000
+ObjFlags=0x0
+;--- 6300h: Cam state register --------------------------------------
+
+[6300]
+ParameterName=Cam state register
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6300sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6300sub1]
+ParameterName=Cam state channel 1
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+ObjFlags=0
+;--- 6301h: Cam enable register -------------------------------------
+
+[6301]
+ParameterName=Cam enable register
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6301sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6301sub1]
+ParameterName=Cam enable channel 1
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+ObjFlags=0
+;--- 6302h: Cam polarity register -----------------------------------
+
+[6302]
+ParameterName=Cam polarity register
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6302sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6302sub1]
+ParameterName=Cam polarity channel 1
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+ObjFlags=0
+;--- 6310h: Cam 1 low limit -----------------------------------------
+
+[6310]
+ParameterName=Cam 1 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6310sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6310sub1]
+ParameterName=Cam 1 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6311h: Cam 2 low limit -----------------------------------------
+
+[6311]
+ParameterName=Cam 2 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6311sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6311sub1]
+ParameterName=Cam 2 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6312h: Cam 3 low limit -----------------------------------------
+
+[6312]
+ParameterName=Cam 3 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6312sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6312sub1]
+ParameterName=Cam 3 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6313h: Cam 4 low limit -----------------------------------------
+
+[6313]
+ParameterName=Cam 4 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6313sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6313sub1]
+ParameterName=Cam 4 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6314h: Cam 5 low limit -----------------------------------------
+
+[6314]
+ParameterName=Cam 5 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6314sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6314sub1]
+ParameterName=Cam 5 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6315h: Cam 6 low limit -----------------------------------------
+
+[6315]
+ParameterName=Cam 6 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6315sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6315sub1]
+ParameterName=Cam 6 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6316h: Cam 7 low limit -----------------------------------------
+
+[6316]
+ParameterName=Cam 7 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6316sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6316sub1]
+ParameterName=Cam 7 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6317h: Cam 8 low limit -----------------------------------------
+
+[6317]
+ParameterName=Cam 8 low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6317sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6317sub1]
+ParameterName=Cam 8 low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6320h: Cam 1 high limit ----------------------------------------
+
+[6320]
+ParameterName=Cam 1 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6320sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6320sub1]
+ParameterName=Cam 1 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6321h: Cam 2 high limit ----------------------------------------
+
+[6321]
+ParameterName=Cam 2 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6321sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6321sub1]
+ParameterName=Cam 2 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6322h: Cam 3 high limit ----------------------------------------
+
+[6322]
+ParameterName=Cam 3 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6322sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6322sub1]
+ParameterName=Cam 3 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6323h: Cam 4 high limit -----------------------------------------
+
+[6323]
+ParameterName=Cam 4 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6323sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6323sub1]
+ParameterName=Cam 4 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6324h: Cam 5 high limit ----------------------------------------
+
+[6324]
+ParameterName=Cam 5 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6324sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6324sub1]
+ParameterName=Cam 5 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6325h: Cam 6 high limit ----------------------------------------
+
+[6325]
+ParameterName=Cam 6 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6325sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6325sub1]
+ParameterName=Cam 6 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6326h: Cam 7 high limit ----------------------------------------
+
+[6326]
+ParameterName=Cam 7 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6326sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6326sub1]
+ParameterName=Cam 7 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6327h: Cam 8 high limit ----------------------------------------
+
+[6327]
+ParameterName=Cam 8 high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6327sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6327sub1]
+ParameterName=Cam 8 high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6330h: Cam 1 hysteresis ----------------------------------------
+
+[6330]
+ParameterName=Cam 1 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6330sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6330sub1]
+ParameterName=Cam 1 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6331h: Cam 2 hysteresis ----------------------------------------
+
+[6331]
+ParameterName=Cam 2 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6331sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6331sub1]
+ParameterName=Cam 2 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6332h: Cam 3 hysteresis ----------------------------------------
+
+[6332]
+ParameterName=Cam 3 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6332sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6332sub1]
+ParameterName=Cam 3 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6333h: Cam 4 hysteresis -----------------------------------------
+
+[6333]
+ParameterName=Cam 4 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6333sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6333sub1]
+ParameterName=Cam 4 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6334h: Cam 5 hysteresis ----------------------------------------
+
+[6334]
+ParameterName=Cam 5 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6334sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6334sub1]
+ParameterName=Cam 5 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6335h: Cam 6 hysteresis ----------------------------------------
+
+[6335]
+ParameterName=Cam 6 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6335sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6335sub1]
+ParameterName=Cam 6 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6336h: Cam 7 hysteresis ----------------------------------------
+
+[6336]
+ParameterName=Cam 7 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6336sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6336sub1]
+ParameterName=Cam 7 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+;--- 6337h: Cam 8 hysteresis ----------------------------------------
+
+[6337]
+ParameterName=Cam 8 hysteresis
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6337sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+ObjFlags=0
+
+[6337sub1]
+ParameterName=Cam 8 hysteresis channel 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[6400]
+ParameterName=Area State Register
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6400sub0]
+ParameterName=Number of available channels
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+ObjFlags=0
+
+[6400sub1]
+ParameterName=Work area state channel 1
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+ObjFlags=0
+
+[6401]
+ParameterName=Work area low limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6401sub0]
+ParameterName=Number of available channels
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+ObjFlags=0
+
+[6401sub1]
+ParameterName=Work area low limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[6402]
+ParameterName=Work area high limit
+ObjectType=0x8
+SubNumber=2
+ObjFlags=0x0
+
+[6402sub0]
+ParameterName=Number of available channels
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+ObjFlags=0
+
+[6402sub1]
+ParameterName=Work area high limit channel 1
+ObjectType=0x7
+DataType=0x0004
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[6500]
+ParameterName=Operating Status
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0x0
+;--- 6501h: Single turn resolution ----------------------------------
+
+[6501]
+ParameterName=Single Turn Resolution
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+LowLimit=1
+HighLimit=65536
+ObjFlags=0x0
+
+[6502]
+ParameterName=Number of distinguishable revolutions
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+LowLimit=1
+HighLimit=65535
+ObjFlags=0x0
+
+[6503]
+ParameterName=Alarms
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=1
+ObjFlags=0x0
+
+[6504]
+ParameterName=Supported Alarms
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0x0
+
+[6505]
+ParameterName=Warnings
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=1
+ObjFlags=0x0
+
+[6506]
+ParameterName=Supported Warnings
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0x0
+
+[6507]
+ParameterName=Profile and software version
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0x0
+
+[6508]
+ParameterName=Operating Time
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0xFFFFFFFF
+PDOMapping=0
+ObjFlags=0x0
+
+[6509]
+ParameterName=Offset Value
+ObjectType=0x7
+DataType=0x0004
+AccessType=ro
+PDOMapping=0
+LowLimit=0
+HighLimit=268435456
+ObjFlags=0x0
+
+[650A]
+ParameterName=Module identification
+ObjectType=0x9
+SubNumber=4
+ObjFlags=0x0
+
+[650Asub0]
+ParameterName=Number of available module identication
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+LowLimit=0
+HighLimit=3
+ObjFlags=0
+
+[650Asub1]
+ParameterName=Manufacturer offset value
+ObjectType=0x7
+DataType=0x0004
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[650Asub2]
+ParameterName=Manufacturer min. position value
+ObjectType=0x7
+DataType=0x0004
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[650Asub3]
+ParameterName=Manufacturer max. position value
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[650B]
+ParameterName=Serial Number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+LowLimit=0
+HighLimit=0xFFFFFFFF
+ObjFlags=0x0
+
+[6510]
+ParameterName=Number of high precision revolutions
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=0
+ObjFlags=0x0
+; --------------------Manufacturer objects -----------------
+
+[ManufacturerObjects]
+SupportedObjects=16
+1=0x2100
+2=0x2101
+3=0x2103
+4=0x2105
+5=0x2106
+6=0x2107
+7=0x2120
+8=0x2500
+9=0x2502
+10=0x2503
+11=0x2504
+12=0x2505
+13=0x2506
+14=0x2507
+15=0x2A00
+16=0x3000
+
+[2100]
+ParameterName=Baudrate
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+LowLimit=0
+HighLimit=9
+ObjFlags=0x0
+
+[2101]
+ParameterName=Node-ID
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+LowLimit=1
+HighLimit=127
+ObjFlags=0x0
+
+[2103]
+ParameterName=Bus-Off Autoreset
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+ObjFlags=0x0
+
+[2105]
+ParameterName=Integration values
+ObjectType=0x9
+SubNumber=7
+ObjFlags=0x0
+
+[2105sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=6
+PDOMapping=0
+ObjFlags=0
+
+[2105sub1]
+ParameterName=Filter value
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=254
+ObjFlags=0
+
+[2105sub2]
+ParameterName=Speed Integration (not implemented)
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2105sub3]
+ParameterName=Hysteresis
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+ObjFlags=0
+
+[2105sub4]
+ParameterName=Filter max RPM
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=30000
+ObjFlags=0
+
+[2105sub5]
+ParameterName=Extrapolation
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65534
+ObjFlags=0
+
+[2105sub6]
+ParameterName=Speed Filter
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=254
+ObjFlags=0
+
+[2106]
+ParameterName=Speed scaling
+ObjectType=0x9
+SubNumber=3
+ObjFlags=0x0
+
+[2106sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x02
+PDOMapping=0
+ObjFlags=0
+
+[2106sub1]
+ParameterName=Multiplier
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x0001
+PDOMapping=0
+LowLimit=1
+HighLimit=65535
+ObjFlags=0
+
+[2106sub2]
+ParameterName=Divider
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x0001
+PDOMapping=0
+LowLimit=1
+HighLimit=65535
+ObjFlags=0
+;--- 2107h: Frequency limit -----------------------------------------
+
+[2107]
+ParameterName=Frequency limit
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=65535
+PDOMapping=0
+LowLimit=1
+HighLimit=65535
+ObjFlags=0x0
+
+[2120]
+ParameterName=Customer Data
+ObjectType=0x8
+SubNumber=9
+
+[2120sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=8
+PDOMapping=0
+
+[2120sub1]
+ParameterName=Customer Data 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2120sub2]
+ParameterName=Customer Data 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2120sub3]
+ParameterName=Customer Data 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2120sub4]
+ParameterName=Customer Data 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2120sub5]
+ParameterName=Customer Data 5
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2120sub6]
+ParameterName=Customer Data 6
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2120sub7]
+ParameterName=Customer Data 7
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2120sub8]
+ParameterName=Customer Data 8
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[2500]
+ParameterName=Temperature
+ObjectType=0x9
+SubNumber=6
+ObjFlags=0x0
+
+[2500sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=0x05
+PDOMapping=0
+ObjFlags=0
+
+[2500sub1]
+ParameterName=Actual value
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+ObjFlags=0
+
+[2500sub2]
+ParameterName=Upper limit
+ObjectType=0x7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2500sub3]
+ParameterName=Lower limit
+ObjectType=0x7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2500sub4]
+ParameterName=Max value
+ObjectType=0x7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2500sub5]
+ParameterName=Min value
+ObjectType=0x7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2502]
+ParameterName=Error history
+ObjectType=0x8
+SubNumber=6
+ObjFlags=0x0
+
+[2502sub0]
+ParameterName=Number of errors
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+LowLimit=0
+HighLimit=5
+ObjFlags=0
+
+[2502sub1]
+ParameterName=Standard Error Field 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2502sub2]
+ParameterName=Standard Error Field 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2502sub3]
+ParameterName=Standard Error Field 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2502sub4]
+ParameterName=Standard Error Field 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2502sub5]
+ParameterName=Standard Error Field 5
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2503]
+ParameterName=Alarm history
+ObjectType=0x8
+SubNumber=6
+ObjFlags=0x0
+
+[2503sub0]
+ParameterName=Number of alarms
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+LowLimit=0
+HighLimit=5
+ObjFlags=0
+
+[2503sub1]
+ParameterName=Alarm Field 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2503sub2]
+ParameterName=Alarm Field 2
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2503sub3]
+ParameterName=Alarm Field 3
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2503sub4]
+ParameterName=Alarm Field 4
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2503sub5]
+ParameterName=Alarm Field 5
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2504]
+ParameterName=Warning history
+ObjectType=0x8
+SubNumber=6
+ObjFlags=0x0
+
+[2504sub0]
+ParameterName=Number of warnings
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+LowLimit=0
+HighLimit=5
+ObjFlags=0
+
+[2504sub1]
+ParameterName=Warning Field 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2504sub2]
+ParameterName=Warning Field 2
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2504sub3]
+ParameterName=Warning Field 3
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2504sub4]
+ParameterName=Warning Field 4
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2504sub5]
+ParameterName=Warning Field 5
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+ObjFlags=0
+
+[2505]
+ParameterName=Bootloader activation
+ObjectType=0x7
+DataType=0x0005
+AccessType=wo
+PDOMapping=0
+ObjFlags=0x0
+
+[2506]
+ParameterName=Calibration mode
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+LowLimit=0
+HighLimit=1
+ObjFlags=0x0
+
+[2507]
+ParameterName=Calibration data
+ObjectType=0x9
+SubNumber=4
+ObjFlags=0x0
+
+[2507sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=3
+PDOMapping=0
+ObjFlags=0
+
+[2507sub1]
+ParameterName=Calibration data index
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2507sub2]
+ParameterName=sin
+ObjectType=0x7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2507sub3]
+ParameterName=cos
+ObjectType=0x7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+ObjFlags=0
+
+[2A00]
+ParameterName=CAN error counters
+ObjectType=0x8
+SubNumber=3
+
+[2A00sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=2
+PDOMapping=0
+
+[2A00sub1]
+ParameterName=Transmit error counter (TEC) value
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[2A00sub2]
+ParameterName=Receive error counter (REC) value
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[3000]
+ParameterName=Manufacturer mode
+ObjectType=0x7
+DataType=0x0007
+AccessType=wo
+PDOMapping=0
+ObjFlags=0x0
+;--- 3001h: Status singleturn ---------------------------------------
