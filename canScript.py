@@ -6,7 +6,7 @@ network = canopen.Network()
 network.connect(channel='vcan0', interface='socketcan')
 network.sync.start(0.01) # Transmit sync message every 10 ms
 
-encoder_node = canopen.LocalNode(2, 'eds_files/HTB_FHB_PM_CA_2021-02-24.eds')
+encoder_node = canopen.LocalNode(52, 'eds_files/HTB_FHB_PM_CA_2021-02-24.eds')
 motor_node = BaseNode402(3, 'eds_files/Eds1406C.eds')
 
 network.add_node(encoder_node)
