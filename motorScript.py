@@ -2,38 +2,58 @@ import canopen
 import time
 from canopen.profiles.p402 import BaseNode402
 
-network = canopen.Network()
-network.connect(channel='can0', interface='socketcan')
+def print_system_states(network, motor_node):
+    print("------------------------------")
+    print(f"Network State: {network.nmt.state}")
+    print(f"State Machine State: {motor_node.state}")
 
-motor_node = BaseNode402(3, 'eds_files/Eds1406C.eds')
-network.add_node(motor_node)
+def setup_network():
+    network = canopen.Network()
+    network.connect(channel='can0', interface='socketcan')
+    return network
 
-motor_node.nmt.state = 'PRE-OPERATIONAL'
-motor_node.setup_402_state_machine()
-motor_node.setup_pdos()
-motor_node.op_mode = 'PROFILED VELOCITY'
-motor_node.nmt.state = 'OPERATIONAL'
+def add_motor(network, node_num):
+    motor_node = BaseNode402(node_num, 'eds_files/Eds1406C.eds')
+    network.add_node(motor_node)
+    return motor_node
 
-motor_node.state = 'NOT READY TO SWITCH ON'
-print(motor_node.state)
+network = setup_network()
+motor1 = add_motor(network, node_num=3)
 
-motor_node.state = 'SWITCHED ON'
-print(motor_node.state)
+# Network Initialization Stage
+print_system_states(network, motor1)
 
-motor_node.state = 'OPERATION ENABLED'
-print(motor_node.state)
+# Network Pre Op Stage
+network.nmt.state = 'PRE-OPERATIONAL'
+print_system_states(network, motor1)
+motor1.setup_402_state_machine()
+motor1.setup_pdos()
+motor1.op_mode = 'PROFILED VELOCITY'
 
-print(motor_node.op_mode)
+# Network Operational Stage
+network.nmt.state = 'OPERATIONAL'
 
-try:
-    while True:
-        print(f"Current velocity: {motor_node.sdo[0x606C].raw} rpm")
-        time.sleep(1)
 
-except KeyboardInterrupt:
-    print("\nStopping motor...")
+# motor_node.state = 'NOT READY TO SWITCH ON'
+# print(motor_node.state)
 
-    motor_node.state = 'READY TO SWITCH ON'
-    print(motor_node.state)
-    
+# motor_node.state = 'SWITCHED ON'
+# print(motor_node.state)
+
+# motor_node.state = 'OPERATION ENABLED'
+# print(motor_node.state)
+
+# print(motor_node.op_mode)
+
+# try:
+#     while True:
+#         print(f"Current velocity: {motor_node.sdo[0x606C].raw} rpm")
+#         time.sleep(1)
+
+# except KeyboardInterrupt:
+#     print("\nStopping motor...")
+
+#     motor_node.state = 'READY TO SWITCH ON'
+#     print(motor_node.state)
+
 network.disconnect()
