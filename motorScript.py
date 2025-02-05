@@ -36,28 +36,6 @@ print_system_states(network, motor1)
 network.nmt.state = 'OPERATIONAL'
 print_system_states(network, motor1)
 
-# motor_node.state = 'NOT READY TO SWITCH ON'
-# print(motor_node.state)
-
-# motor_node.state = 'SWITCHED ON'
-# print(motor_node.state)
-
-# motor_node.state = 'OPERATION ENABLED'
-# print(motor_node.state)
-
-# print(motor_node.op_mode)
-
-# try:
-#     while True:
-#         print(f"Current velocity: {motor_node.sdo[0x606C].raw} rpm")
-#         time.sleep(1)
-
-# except KeyboardInterrupt:
-#     print("\nStopping motor...")
-
-#     motor_node.state = 'READY TO SWITCH ON'
-#     print(motor_node.state)
-
 try:
     while True:
         pass
