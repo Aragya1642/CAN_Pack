@@ -3,9 +3,12 @@ import time
 from canopen.profiles.p402 import BaseNode402
 
 def print_system_states(network, motor_node):
+    op_mode_disp = motor_node.sdo['Modes Of Operation Display']
+
     print("------------------------------")
     print(f"Network State: {network.nmt.state}")
     print(f"State Machine State: {motor_node.state}")
+    print(f"Operation Mode: {op_mode_disp.read()}")
 
 def setup_network():
     network = canopen.Network()
@@ -25,14 +28,13 @@ print_system_states(network, motor1)
 
 # Network Pre Op Stage
 network.nmt.state = 'PRE-OPERATIONAL'
-print_system_states(network, motor1)
-motor1.setup_402_state_machine()
-motor1.setup_pdos()
 motor1.op_mode = 'PROFILED VELOCITY'
+print_system_states(network, motor1)
+
 
 # Network Operational Stage
 network.nmt.state = 'OPERATIONAL'
-
+print_system_states(network, motor1)
 
 # motor_node.state = 'NOT READY TO SWITCH ON'
 # print(motor_node.state)
@@ -56,4 +58,13 @@ network.nmt.state = 'OPERATIONAL'
 #     motor_node.state = 'READY TO SWITCH ON'
 #     print(motor_node.state)
 
-network.disconnect()
+try:
+    while True:
+        pass
+except KeyboardInterrupt:
+    motor1.op_mode = 'NO MODE'
+    print_system_states(network, motor1)
+    network.nmt.state = 'INITIALISING'
+    print("------------------------------")
+    print(f"Network State: {network.nmt.state}")
+    network.disconnect()
