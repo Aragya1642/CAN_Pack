@@ -1066,7 +1066,7 @@ DataType=0x0007
 PDOMapping=0
 LowLimit=
 HighLimit=
-DefaultValue=0x20120040
+DefaultValue=0x20130040
 
 [1601sub2]
 ParameterName=PDO Mapping for the 2nd Application Object to Be Mapped
@@ -1706,7 +1706,7 @@ DataType=0x0007
 PDOMapping=0
 LowLimit=
 HighLimit=
-DefaultValue=0x20130040
+DefaultValue=0x20140040
 
 [1A01sub2]
 ParameterName=PDO Mapping For The 2nd  Application Object To Be Mapped
