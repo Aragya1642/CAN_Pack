@@ -83,10 +83,11 @@ motor1.state = 'OPERATION ENABLED'
 print_system_states(network, motor1)
 
 # Command the motor to spin by sending a target velocity.
-target_velocity = 500  # change this value as needed
+target_velocity = 80000  # change this value as needed
 print(f"Setting target velocity to {target_velocity}")
 motor1.rpdo[3]['Target Velocity'].raw = target_velocity
 motor1.rpdo[3].transmit()
+# motor1.sdo[0x60FF].raw = target_velocity
 
 try:
     while True:
